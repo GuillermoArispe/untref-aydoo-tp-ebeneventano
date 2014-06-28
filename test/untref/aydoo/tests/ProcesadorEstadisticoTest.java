@@ -5,8 +5,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.zip.ZipFile;
 
-import junit.framework.Assert;
-
+import org.junit.Assert;
 import org.junit.Test;
 
 import untref.aydoo.dominio.Bicicleta;

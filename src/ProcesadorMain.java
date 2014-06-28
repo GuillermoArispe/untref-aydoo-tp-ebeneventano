@@ -12,7 +12,6 @@ import javax.swing.SwingUtilities;
 import untref.aydoo.threads.ThreadListener;
 import untref.aydoo.threads.ThreadProcessor;
 
-
 @SuppressWarnings("serial")
 public class ProcesadorMain extends JFrame{
 	
