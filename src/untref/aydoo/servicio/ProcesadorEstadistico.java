@@ -54,4 +54,15 @@ public interface ProcesadorEstadistico {
 	void procesarDirectorio(Path pathProcesing) throws ZipException, IOException;
 	
 	Integer getPromedioUso(Map<Bicicleta, DatosBicicleta> bicicletasEnCsv);
+	
+	/**
+	 * Devuelve el tiempo de la o las Bicicletas mas usadas
+	 */	
+	Integer getTiempoBicicletaMasUsada(Map<Bicicleta, DatosBicicleta> bicicletas);
+	
+	/**
+	 * Devuelve un mapa con las Bicicletas usadas mas tiempo
+	 */
+	
+	Map<Bicicleta, DatosBicicleta> getBicicletasUtilizadasMasTiempo(Map<Bicicleta, DatosBicicleta> bicicletas);
 }

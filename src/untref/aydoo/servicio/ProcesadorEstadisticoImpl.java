@@ -475,11 +475,6 @@ public class ProcesadorEstadisticoImpl implements ProcesadorEstadistico {
 		return exportYml;
 	}
 
-	/*
-	 * Calcular tiempo de uso de las bicicletas mas usadas
-	 * TP - Segunda parte
-	 */
-
 	public Integer getTiempoBicicletaMasUsada(
 			Map<Bicicleta, DatosBicicleta> bicicletas) {
 		
@@ -494,11 +489,6 @@ public class ProcesadorEstadisticoImpl implements ProcesadorEstadistico {
 
 		return tiempo;
 	}
-
-	/*
-	 * Calcular las bicicletas usadas mas tiempo
-	 * TP - Segunda parte
-	 */
 
 	public Map<Bicicleta, DatosBicicleta> getBicicletasUtilizadasMasTiempo(
 			Map<Bicicleta, DatosBicicleta> bicicletas) {
