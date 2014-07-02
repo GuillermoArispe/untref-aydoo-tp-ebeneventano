@@ -78,27 +78,5 @@ public class ProcesadorMain extends JFrame{
                 ex.setVisible(true);
             }
         });
-        
-//		int opcion = -1;
-//		while(opcion != 0){
-//			System.out.println("Seleccine una opcion: ");
-//			System.out.println("1. Escuchar un directorio");
-//			System.out.println("2. Procesar un directorio");
-//			BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-//			opcion = Integer.valueOf(br.readLine());
-//			if(opcion == 1){
-//				BufferedReader bufferListener = new BufferedReader(new InputStreamReader(System.in));
-//				System.out.println("Ingrese la ruta del directorio que desea escuchar");
-//				ThreadListener thread = new ThreadListener(bufferListener.readLine());
-//				thread.start();
-//			}else if(opcion == 2){
-//				BufferedReader bufferListener = new BufferedReader(new InputStreamReader(System.in));
-//				System.out.println("Ingrese la ruta del directorio que desea procesar");
-//				ThreadProcessor thread = new ThreadProcessor(bufferListener.readLine());
-//				thread.start();
-//			}else{
-//				System.out.println("Opcion incorrecto, vuelva a ingresar otra opcion");
-//			}
-//		}
 	}
 }

@@ -49,7 +49,7 @@ public class ProcesadorEstadisticoImpl implements ProcesadorEstadistico {
 
 		// Itrate through hashmap
 		for (Entry<Bicicleta, DatosBicicleta> entry : bicicletas.entrySet()) {
-			
+
 			if (entry.getValue().getCantidadVecesUsada() == maxValueInMap) {
 				bicicletasAExportar.put(entry.getKey(), entry.getValue());
 			}
@@ -429,12 +429,12 @@ public class ProcesadorEstadisticoImpl implements ProcesadorEstadistico {
 	private ExportYmlDTO exportarYML(
 			Map<Bicicleta, DatosBicicleta> bicicletasEnCsv)
 			throws FileNotFoundException {
-		
+
 		ExportYmlDTO exportYml = new ExportYmlDTO();
-		
+
 		Map<Bicicleta, DatosBicicleta> bicicletasMasUsadas = this
 				.obtenerBicicletasUtilizadasMasVeces(bicicletasEnCsv);
-		
+
 		for (Map.Entry<Bicicleta, DatosBicicleta> entry : bicicletasMasUsadas
 				.entrySet()) {
 			exportYml.addBicicletaMasUsada(entry.getKey());
@@ -442,42 +442,44 @@ public class ProcesadorEstadisticoImpl implements ProcesadorEstadistico {
 
 		Map<Bicicleta, DatosBicicleta> bicicletasMenosUsadas = this
 				.obtenerBicicletaUtilizadaMenosVeces(bicicletasEnCsv);
-		
+
 		for (Map.Entry<Bicicleta, DatosBicicleta> entry : bicicletasMenosUsadas
 				.entrySet()) {
 			exportYml.addBicicletaMenosUsada(entry.getKey());
 		}
-		
+
 		Integer promedioUso = this.getPromedioUso(bicicletasEnCsv);
 		exportYml.setPromedioUso(promedioUso);
 
 		Map<Trayectoria, Integer> recorridoMasRealizado = this
 				.obtenerRecorridoMasRealizado(bicicletasEnCsv);
-		
+
 		for (Map.Entry<Trayectoria, Integer> entry : recorridoMasRealizado
 				.entrySet()) {
-			
+
 			exportYml.addTrayectoriaMasRealizada(entry.getKey());
-		
+
 		}
-		
-		Map<Bicicleta, DatosBicicleta> bicicletasUtilizadasMasTiempo = this.getBicicletasUtilizadasMasTiempo(bicicletasEnCsv);
-		
-		for (Map.Entry<Bicicleta, DatosBicicleta> entry : bicicletasUtilizadasMasTiempo.entrySet()) {
-			
+
+		Map<Bicicleta, DatosBicicleta> bicicletasUtilizadasMasTiempo = this
+				.getBicicletasUtilizadasMasTiempo(bicicletasEnCsv);
+
+		for (Map.Entry<Bicicleta, DatosBicicleta> entry : bicicletasUtilizadasMasTiempo
+				.entrySet()) {
+
 			exportYml.addBicicletaUtilizadaMastiempo(entry.getKey());
 		}
-		
-		Integer tiempoUsoBicicletaMasUsada = this.getTiempoBicicletaMasUsada(bicicletasEnCsv);
+
+		Integer tiempoUsoBicicletaMasUsada = this
+				.getTiempoBicicletaMasUsada(bicicletasEnCsv);
 		exportYml.setTiempoUsoBicicletaMasUsada(tiempoUsoBicicletaMasUsada);
-		
-		
+
 		return exportYml;
 	}
 
 	public Integer getTiempoBicicletaMasUsada(
 			Map<Bicicleta, DatosBicicleta> bicicletas) {
-		
+
 		Integer tiempo = 0;
 		Map<Bicicleta, DatosBicicleta> datosBicicletas = this
 				.obtenerBicicletasUtilizadasMasVeces(bicicletas);
