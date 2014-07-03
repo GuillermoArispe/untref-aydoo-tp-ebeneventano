@@ -62,7 +62,6 @@ public interface ProcesadorEstadistico {
 	
 	/**
 	 * Devuelve un mapa con las Bicicletas usadas mas tiempo
-	 */
-	
+	 */	
 	Map<Bicicleta, DatosBicicleta> getBicicletasUtilizadasMasTiempo(Map<Bicicleta, DatosBicicleta> bicicletas);
 }

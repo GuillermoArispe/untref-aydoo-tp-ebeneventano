@@ -1,0 +1,19 @@
+--------------------
+ANALISIS DE TIEMPOS:
+--------------------
+
+Para realizar las mediciones se utilizó un archivo de, exactamente, 740087 registros de manera que el tiempo medido sea considerable.
+La medición se realizó con un cronometro manualmente, obteniendo así un valor no exacto, pero muy aproximado de 7.43 segundos.
+
+Luego de agregar las nuevas funciones, se midió nuevamente con el mismo archivo, y el tiempo resultante fue 7.41 segundos, aproximadamente.
+
+Teniendo en cuenta un cierto error por la medición manual, el tiempo no se vió modificado luego de agregar las funciones nuevas.
+
+De esta manera se puede ver que, en cuanto a rendimiento, los algoritmos planteados por el compañero son óptimos. Como se mencionó anteriormente, el valor que se obtuvo como resultado es bastante bueno.
+
+-------------------
+ASPECTOS A MEJORAR:
+-------------------
+
+El punto mas interesante que veo para mejorar, sería el de recorrer solo una vez el mismo mapa, debido a que este procedimiento se realiza en todas las funciones. 
+De todas maneras, no afecta demasiado al tiempo total.
