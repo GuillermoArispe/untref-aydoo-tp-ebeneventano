@@ -58,10 +58,10 @@ public interface ProcesadorEstadistico {
 	/**
 	 * Devuelve el tiempo de la o las Bicicletas mas usadas
 	 */	
-	Integer getTiempoBicicletaMasUsada(Map<Bicicleta, DatosBicicleta> bicicletas);
+	Integer obtenerTiempoBicicletaMasUsada(Map<Bicicleta, DatosBicicleta> bicicletas);
 	
 	/**
 	 * Devuelve un mapa con las Bicicletas usadas mas tiempo
 	 */	
-	Map<Bicicleta, DatosBicicleta> getBicicletasUtilizadasMasTiempo(Map<Bicicleta, DatosBicicleta> bicicletas);
+	Map<Bicicleta, DatosBicicleta> obtenerBicicletasUtilizadasMasTiempo(Map<Bicicleta, DatosBicicleta> bicicletas);
 }

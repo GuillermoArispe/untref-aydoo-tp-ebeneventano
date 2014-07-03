@@ -462,22 +462,23 @@ public class ProcesadorEstadisticoImpl implements ProcesadorEstadistico {
 		}
 
 		Map<Bicicleta, DatosBicicleta> bicicletasUtilizadasMasTiempo = this
-				.getBicicletasUtilizadasMasTiempo(bicicletasEnCsv);
+				.obtenerBicicletasUtilizadasMasTiempo(bicicletasEnCsv);
 
 		for (Map.Entry<Bicicleta, DatosBicicleta> entry : bicicletasUtilizadasMasTiempo
 				.entrySet()) {
 
-			exportYml.addBicicletaUtilizadaMastiempo(entry.getKey());
+			exportYml.addBicicletaUtilizadaMasTiempo(entry.getKey());
 		}
 
 		Integer tiempoUsoBicicletaMasUsada = this
-				.getTiempoBicicletaMasUsada(bicicletasEnCsv);
-		exportYml.setTiempoUsoBicicletaMasUsada(tiempoUsoBicicletaMasUsada);
+				.obtenerTiempoBicicletaMasUsada(bicicletasEnCsv);
+
+		exportYml.setTiempoBicicletaMasUtilizada(tiempoUsoBicicletaMasUsada);
 
 		return exportYml;
 	}
 
-	public Integer getTiempoBicicletaMasUsada(
+	public Integer obtenerTiempoBicicletaMasUsada(
 			Map<Bicicleta, DatosBicicleta> bicicletas) {
 
 		Integer tiempo = 0;
@@ -492,7 +493,7 @@ public class ProcesadorEstadisticoImpl implements ProcesadorEstadistico {
 		return tiempo;
 	}
 
-	public Map<Bicicleta, DatosBicicleta> getBicicletasUtilizadasMasTiempo(
+	public Map<Bicicleta, DatosBicicleta> obtenerBicicletasUtilizadasMasTiempo(
 			Map<Bicicleta, DatosBicicleta> bicicletas) {
 
 		Map<Bicicleta, DatosBicicleta> bicicletasUtilizadasMasTiempo = new HashMap<Bicicleta, DatosBicicleta>();

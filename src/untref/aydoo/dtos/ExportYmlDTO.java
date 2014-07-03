@@ -11,7 +11,6 @@ public class ExportYmlDTO {
 	private List<Bicicleta> bicicletaMenosUsada = new ArrayList<Bicicleta>();
 	private Integer promedioUso;
 	private List<Trayectoria> mayorRecorridoRealizado = new ArrayList<Trayectoria>();
-
 	private Integer tiempoBicicletaMasUtilizada;
 	private List<Bicicleta> bicicletaUtilizadaMasTiempo = new ArrayList<Bicicleta>();
 
@@ -60,19 +59,25 @@ public class ExportYmlDTO {
 		this.mayorRecorridoRealizado.add(trayectoria);
 	}
 
-	public void addBicicletaUtilizadaMastiempo(Bicicleta bicicleta) {
+	public Integer getTiempoBicicletaMasUtilizada() {
+		return tiempoBicicletaMasUtilizada;
+	}
+
+	public void setTiempoBicicletaMasUtilizada(Integer tiempoBicicletaMasUtilizada) {
+		this.tiempoBicicletaMasUtilizada = tiempoBicicletaMasUtilizada;
+	}
+
+	public List<Bicicleta> getBicicletaUtilizadaMasTiempo() {
+		return bicicletaUtilizadaMasTiempo;
+	}
+
+	public void setBicicletaUtilizadaMasTiempo(
+			List<Bicicleta> bicicletaUtilizadaMasTiempo) {
+		this.bicicletaUtilizadaMasTiempo = bicicletaUtilizadaMasTiempo;
+	}
+	
+	public void addBicicletaUtilizadaMasTiempo(Bicicleta bicicleta){
 		this.bicicletaUtilizadaMasTiempo.add(bicicleta);
 	}
-
-	public List<Bicicleta> getBicicletasUtilizadasMasTiempo() {
-		return this.bicicletaUtilizadaMasTiempo;
-	}
-
-	public void setTiempoUsoBicicletaMasUsada(Integer tiempo) {
-		this.tiempoBicicletaMasUtilizada = tiempo;
-	}
-
-	public Integer getTiempoUsoBicicletaMasUsada() {
-		return this.tiempoBicicletaMasUtilizada;
-	}
+	
 }
